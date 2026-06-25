@@ -11,28 +11,26 @@
 
 const App = {
 
+    /*=====================================================
+      Initialize Application
+    =====================================================*/
+
     initialize() {
 
         this.cacheDOM();
 
-        this.bindData();
+        this.bindConfiguration();
 
-        this.initializeModules();
+        this.initializeUI();
 
         this.initializeCurrentYear();
 
-        console.info(
-
-            `%c${CONFIG.clinic.name}`,
-
-            "color:#2E5E4E;font-size:18px;font-weight:bold;"
-
-        );
+        this.logApplication();
 
     },
 
     /*=====================================================
-      Cache DOM
+      Cache DOM Elements
     =====================================================*/
 
     cacheDOM() {
@@ -61,42 +59,90 @@ const App = {
       Bind Configuration
     =====================================================*/
 
-    bindData() {
+    bindConfiguration() {
 
-        this.phoneLinks.forEach(item => {
+        this.bindPhone();
 
-            item.href = CONFIG.contact.phoneLink;
+        this.bindWhatsApp();
 
-            item.textContent = CONFIG.contact.phone;
+        this.bindEmail();
+
+        this.bindAddress();
+
+        this.bindMap();
+
+    },
+
+    /*=====================================================
+      Phone
+    =====================================================*/
+
+    bindPhone() {
+
+        this.phoneLinks.forEach(link => {
+
+            link.href = CONFIG.contact.phoneLink;
+
+            link.textContent = CONFIG.contact.phone;
 
         });
 
-        this.whatsappLinks.forEach(item => {
+    },
 
-            item.href = CONFIG.contact.whatsappLink;
+    /*=====================================================
+      WhatsApp
+    =====================================================*/
+
+    bindWhatsApp() {
+
+        this.whatsappLinks.forEach(link => {
+
+            link.href = CONFIG.contact.whatsappLink;
 
         });
 
-        this.emailLinks.forEach(item => {
+    },
 
-            item.href = CONFIG.contact.emailLink;
+    /*=====================================================
+      Email
+    =====================================================*/
 
-            item.textContent = CONFIG.contact.email;
+    bindEmail() {
+
+        this.emailLinks.forEach(link => {
+
+            link.href = CONFIG.contact.emailLink;
+
+            link.textContent = CONFIG.contact.email;
 
         });
+
+    },
+
+    /*=====================================================
+      Address
+    =====================================================*/
+
+    bindAddress() {
 
         this.address.forEach(item => {
 
             item.textContent =
-
                 CONFIG.location.fullAddress;
 
         });
 
-        this.mapFrames.forEach(item => {
+    },
 
-            item.src =
+    /*=====================================================
+      Google Map
+    =====================================================*/
 
+    bindMap() {
+
+        this.mapFrames.forEach(frame => {
+
+            frame.src =
                 CONFIG.location.mapEmbed;
 
         });
@@ -104,10 +150,10 @@ const App = {
     },
 
     /*=====================================================
-      Modules
+      Initialize UI Modules
     =====================================================*/
 
-    initializeModules() {
+    initializeUI() {
 
         if (typeof initializeNavigation === "function") {
 
@@ -142,6 +188,22 @@ const App = {
             item.textContent = year;
 
         });
+
+    },
+
+    /*=====================================================
+      Console Information
+    =====================================================*/
+
+    logApplication() {
+
+        console.info(
+
+            `%c${CONFIG.clinic.name}`,
+
+            "color:#2E5E4E;font-size:18px;font-weight:bold;"
+
+        );
 
     }
 

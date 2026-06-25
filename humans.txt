@@ -1,0 +1,35 @@
+/* TEAM */
+
+Clinic:
+Santulan Therapy Clinic
+
+Therapist:
+Rashi Tangri
+
+Website:
+Version 1.0
+
+Technology:
+HTML5
+CSS3
+Vanilla JavaScript
+
+Performance:
+Optimized for Lighthouse
+
+SEO:
+Semantic HTML
+Schema.org
+Open Graph
+Twitter Cards
+
+Accessibility:
+WCAG Friendly
+
+Responsive:
+Desktop
+Tablet
+Mobile
+
+Generated:
+2026

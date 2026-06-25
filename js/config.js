@@ -47,7 +47,7 @@ const CONFIG = {
 
     location: {
 
-        address1: "DDA Flats",
+        address1: "146 A, DDA Flats",
 
         address2: "Satyam Enclave",
 

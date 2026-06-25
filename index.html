@@ -61,7 +61,7 @@
           content="https://www.santulantherapy.com">
 
     <meta property="og:image"
-          content="images/logo.png">
+          content="images/logo.svg">
 
     <!-- =========================================================
         Twitter
@@ -124,6 +124,9 @@
     <link rel="stylesheet"
           href="css/animations.css">
 
+    <link rel="stylesheet"
+          href="css/print.css" media="print">
+
 </head>
 
 <body>
@@ -142,8 +145,10 @@ HEADER
    href="#home">
 
 <img
-src="images/logo.png"
-alt="Santulan Therapy Clinic">
+src="images/logo.svg"
+alt="Santulan Therapy Clinic"
+width="220"
+height="55">
 
 </a>
 
@@ -1471,20 +1476,31 @@ referrerpolicy="no-referrer-when-downgrade">
 FOOTER
 ========================================================== -->
 
-<footer>
+<footer class="site-footer">
 
     <div class="container">
 
         <div class="footer-grid">
 
-            <div>
+            <!-- =====================================================
+                 Clinic Information
+            ====================================================== -->
 
-                <img
-                    src="images/logo.png"
-                    alt="Santulan Therapy Clinic"
-                    style="max-width:180px;margin-bottom:20px;">
+            <div class="footer-about">
 
-                <p>
+                <a href="index.html"
+                   class="footer-logo"
+                   aria-label="Santulan Therapy Clinic">
+
+                    <img
+                        src="images/logo.svg"
+                        alt="Santulan Therapy Clinic"
+                        width="240"
+                        height="70">
+
+                </a>
+
+                <p class="footer-description">
 
                     Santulan Therapy Clinic is dedicated to helping
                     individuals achieve emotional wellbeing through
@@ -1493,9 +1509,21 @@ FOOTER
 
                 </p>
 
+                <p class="footer-tagline">
+
+                    <strong>
+                        Confidential • Compassionate • Professional
+                    </strong>
+
+                </p>
+
             </div>
 
-            <div>
+            <!-- =====================================================
+                 Contact
+            ====================================================== -->
+
+            <div class="footer-contact">
 
                 <h4>
 
@@ -1521,7 +1549,11 @@ FOOTER
 
             </div>
 
-            <div>
+            <!-- =====================================================
+                 Address
+            ====================================================== -->
+
+            <div class="footer-address">
 
                 <h4>
 
@@ -1529,13 +1561,14 @@ FOOTER
 
                 </h4>
 
-                <p class="js-address"></p>
+                <address class="js-address">
+
+                </address>
 
                 <a
-
-                    class="btn btn-primary js-whatsapp"
-
-                    target="_blank">
+                    class="btn btn-primary btn-footer js-whatsapp"
+                    target="_blank"
+                    aria-label="Book Appointment on WhatsApp">
 
                     Book Appointment
 
@@ -1543,19 +1576,123 @@ FOOTER
 
             </div>
 
+            <!-- =====================================================
+                 Legal
+            ====================================================== -->
+
+            <div class="footer-legal-links">
+
+                <h4>
+
+                    Legal
+
+                </h4>
+
+                <ul class="footer-links">
+
+                    <li>
+
+                        <a href="privacy-policy.html">
+
+                            Privacy Policy
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="terms-and-conditions.html">
+
+                            Terms & Conditions
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="disclaimer.html">
+
+                            Disclaimer
+
+                        </a>
+
+                    </li>
+
+                    <li>
+
+                        <a href="cookie-policy.html">
+
+                            Cookie Policy
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
         </div>
 
-        <hr>
+        <hr class="footer-divider">
 
-        <p class="copyright">
+        <div class="footer-bottom">
 
-            © <span class="js-current-year"></span>
+            <p class="copyright">
 
-            Santulan Therapy Clinic.
+                © <span class="js-current-year"></span>
 
-            All Rights Reserved.
+                Santulan Therapy Clinic.
 
-        </p>
+                All Rights Reserved.
+
+            </p>
+
+            <nav
+                class="footer-bottom-links"
+                aria-label="Legal Links">
+
+                <a href="privacy-policy.html">
+
+                    Privacy Policy
+
+                </a>
+
+                <span>|</span>
+
+                <a href="terms-and-conditions.html">
+
+                    Terms
+
+                </a>
+
+                <span>|</span>
+
+                <a href="disclaimer.html">
+
+                    Disclaimer
+
+                </a>
+
+                <span>|</span>
+
+                <a href="cookie-policy.html">
+
+                    Cookies
+
+                </a>
+
+            </nav>
+
+            <p class="footer-note">
+
+                Designed with care to support your mental wellbeing.
+
+            </p>
+
+        </div>
 
     </div>
 
@@ -1608,7 +1745,7 @@ LOCAL BUSINESS SCHEMA
   "email":"rashitangri7231@gmail.com",
   "address":{
       "@type":"PostalAddress",
-      "streetAddress":"DDA Flats, Satyam Enclave, Jhilmil",
+      "streetAddress":"146 A, DDA Flats, Satyam Enclave, Jhilmil",
       "addressLocality":"Delhi",
       "postalCode":"110095",
       "addressCountry":"IN"

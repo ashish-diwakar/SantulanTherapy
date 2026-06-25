@@ -1,0 +1,9 @@
+Contact: mailto:rashitangri7231@gmail.com
+
+Preferred-Languages: en
+
+Expires: 2027-06-25T00:00:00.000Z
+
+Canonical: https://www.santulantherapy.com/.well-known/security.txt
+
+Policy: https://www.santulantherapy.com/privacy-policy.html

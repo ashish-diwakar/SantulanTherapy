@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="320"
+     height="80"
+     viewBox="0 0 320 80">
+
+    <defs>
+
+        <linearGradient id="gold"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%">
+
+            <stop offset="0%"
+                  stop-color="#E4C87B"/>
+
+            <stop offset="100%"
+                  stop-color="#C8A25A"/>
+
+        </linearGradient>
+
+    </defs>
+
+    <!-- Lotus Symbol -->
+
+    <g transform="translate(40 40)">
+
+        <path
+            d="M0-22
+               C-8-12 -8 0 0 12
+               C8 0 8-12 0-22Z"
+            fill="url(#gold)"/>
+
+        <path
+            d="M-18-5
+               C-26 2 -26 12 -14 20
+               C-6 10 -7 2 -18-5Z"
+            fill="#2E5E4E"/>
+
+        <path
+            d="M18-5
+               C7 2 6 10 14 20
+               C26 12 26 2 18-5Z"
+            fill="#2E5E4E"/>
+
+        <path
+            d="M-10 18
+               C-6 26 -2 30 0 34
+               C2 30 6 26 10 18Z"
+            fill="url(#gold)"/>
+
+    </g>
+
+    <!-- Clinic Name -->
+
+    <text
+        x="85"
+        y="35"
+        font-size="24"
+        font-family="Poppins, Arial, sans-serif"
+        font-weight="700"
+        fill="#2E5E4E">
+
+        Santulan
+
+    </text>
+
+    <text
+        x="85"
+        y="58"
+        font-size="13"
+        font-family="Poppins, Arial, sans-serif"
+        font-weight="500"
+        fill="#666666">
+
+        Therapy Clinic
+
+    </text>
+
+</svg>

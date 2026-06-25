@@ -5,48 +5,59 @@
 
 "use strict";
 
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
 
-    initializeAnimations();
+//     initializeAnimations();
 
-});
+// });
 
 /*=========================================================
   Initialize
 =========================================================*/
 
-function initializeAnimations() {
+function initializeAnimations(){
 
-    const animatedElements = document.querySelectorAll(
+    const animatedElements =
 
-        ".reveal, .fade, .scale, .slide-left, .slide-right"
+        document.querySelectorAll(
 
-    );
-
-    if (!animatedElements.length)
-        return;
-
-    const observer = new IntersectionObserver(
-
-        handleIntersection,
-
-        {
-
-            root: null,
-
-            rootMargin: "0px",
-
-            threshold: 0.15
-
-        }
+        ".reveal,.fade,.scale,.slide-left,.slide-right"
 
     );
 
-    animatedElements.forEach(element => {
+    if(animatedElements.length){
 
-        observer.observe(element);
+        const observer =
 
-    });
+            new IntersectionObserver(
+
+                handleIntersection,
+
+                {
+
+                    threshold:.15
+
+                }
+
+            );
+
+        animatedElements.forEach(
+
+            element=>observer.observe(element)
+
+        );
+
+    }
+
+    staggerAnimation(".service-card");
+
+    staggerAnimation(".feature-card");
+
+    staggerAnimation(".process-card");
+
+    staggerAnimation(".testimonial-card");
+
+    staggerAnimation(".stat-card");
 
 }
 
@@ -73,39 +84,39 @@ function handleIntersection(entries, observer) {
   Stagger Animation
 =========================================================*/
 
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
 
-    staggerAnimation(
+//     staggerAnimation(
 
-        ".service-card"
+//         ".service-card"
 
-    );
+//     );
 
-    staggerAnimation(
+//     staggerAnimation(
 
-        ".feature-card"
+//         ".feature-card"
 
-    );
+//     );
 
-    staggerAnimation(
+//     staggerAnimation(
 
-        ".process-card"
+//         ".process-card"
 
-    );
+//     );
 
-    staggerAnimation(
+//     staggerAnimation(
 
-        ".testimonial-card"
+//         ".testimonial-card"
 
-    );
+//     );
 
-    staggerAnimation(
+//     staggerAnimation(
 
-        ".stat-card"
+//         ".stat-card"
 
-    );
+//     );
 
-});
+// });
 
 /*=========================================================
   Apply Delay

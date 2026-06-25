@@ -5,11 +5,11 @@
 
 "use strict";
 
-document.addEventListener("DOMContentLoaded", () => {
+// document.addEventListener("DOMContentLoaded", () => {
 
-    initializeFAQ();
+//     initializeFAQ();
 
-});
+// });
 
 /*=========================================================
   Initialize FAQ
