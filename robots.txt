@@ -19,4 +19,4 @@ Disallow: /.git/
 Crawl-delay: 1
 
 # Sitemap
-Sitemap: https://www.santulantherapy.com/sitemap.xml
+Sitemap: https://santulantherapyclinic.com/sitemap.xml
