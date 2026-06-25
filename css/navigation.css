@@ -1,0 +1,296 @@
+/*=========================================================
+  Santulan Therapy Clinic
+  Navigation
+=========================================================*/
+
+/*=========================================================
+  Header
+=========================================================*/
+
+#header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);
+    transition:
+        background-color .3s ease,
+        box-shadow .3s ease,
+        backdrop-filter .3s ease;
+}
+
+.header-scrolled{
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+/*=========================================================
+  Navbar
+=========================================================*/
+
+.navbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:90px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    flex-shrink:0;
+}
+
+.logo img{
+    height:54px;
+    width:auto;
+}
+
+/*=========================================================
+  Desktop Navigation
+=========================================================*/
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:32px;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.nav-links a{
+    position:relative;
+    text-decoration:none;
+    color:var(--heading);
+    font-weight:600;
+    transition:color .3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+    color:var(--primary);
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:var(--accent);
+    transition:width .3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width:100%;
+}
+
+/*=========================================================
+  Desktop Buttons
+=========================================================*/
+
+.nav-buttons{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-shrink:0;
+}
+
+.nav-buttons .btn{
+    white-space:nowrap;
+}
+
+/*=========================================================
+  Mobile Toggle
+=========================================================*/
+
+.mobile-toggle{
+    display:none;
+    width:48px;
+    height:48px;
+    padding:0;
+    border:none;
+    border-radius:12px;
+    background:var(--primary-light);
+    cursor:pointer;
+    position:relative;
+    transition:
+        background-color .3s ease,
+        transform .2s ease;
+}
+
+.mobile-toggle:hover{
+    background:var(--primary);
+}
+
+.mobile-toggle:active{
+    transform:scale(.96);
+}
+
+.mobile-toggle:focus-visible{
+    outline:3px solid var(--accent);
+    outline-offset:3px;
+}
+
+.mobile-toggle span{
+    position:absolute;
+    left:12px;
+    width:24px;
+    height:2px;
+    border-radius:2px;
+    background:var(--primary);
+    transition:
+        transform .3s ease,
+        top .3s ease,
+        opacity .2s ease,
+        background-color .3s ease;
+}
+
+.mobile-toggle:hover span,
+.mobile-toggle.active span{
+    background:#fff;
+}
+
+.mobile-toggle span:nth-child(1){top:16px;}
+.mobile-toggle span:nth-child(2){top:23px;}
+.mobile-toggle span:nth-child(3){top:30px;}
+
+.mobile-toggle.active{
+    background:var(--primary);
+}
+
+.mobile-toggle.active span:nth-child(1){
+    top:23px;
+    transform:rotate(45deg);
+}
+
+.mobile-toggle.active span:nth-child(2){
+    opacity:0;
+}
+
+.mobile-toggle.active span:nth-child(3){
+    top:23px;
+    transform:rotate(-45deg);
+}
+
+/*=========================================================
+  Overlay
+=========================================================*/
+
+.mobile-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.45);
+    opacity:0;
+    visibility:hidden;
+    transition:
+        opacity .3s ease,
+        visibility .3s ease;
+    z-index:998;
+}
+
+.mobile-overlay.active{
+    opacity:1;
+    visibility:visible;
+}
+
+/*=========================================================
+  Mobile Navigation
+=========================================================*/
+
+.mobile-navigation{
+    position:fixed;
+    top:0;
+    right:-320px;
+    width:min(320px,85vw);
+    height:100vh;
+    background:#fff;
+    padding:
+        calc(100px + env(safe-area-inset-top))
+        30px
+        calc(40px + env(safe-area-inset-bottom));
+    overflow-y:auto;
+    box-shadow:-10px 0 30px rgba(0,0,0,.12);
+    transition:right .35s ease;
+    will-change:right;
+    z-index:999;
+}
+
+.mobile-navigation.active{
+    right:0;
+}
+
+.mobile-navigation nav{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.mobile-navigation a{
+    text-decoration:none;
+    color:var(--heading);
+    font-weight:600;
+    transition:
+        color .3s ease,
+        padding-left .3s ease;
+}
+
+.mobile-navigation a:hover{
+    color:var(--primary);
+    padding-left:8px;
+}
+
+.mobile-actions{
+    margin-top:30px;
+}
+
+.mobile-navigation a.js-whatsapp{
+    color:#fff;
+}
+
+/*=========================================================
+  Responsive
+=========================================================*/
+
+@media (max-width:992px){
+
+    .nav-links,
+    .nav-buttons{
+        display:none;
+    }
+
+    .mobile-toggle{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+}
+
+@media (min-width:993px){
+
+    .mobile-toggle,
+    .mobile-navigation,
+    .mobile-overlay{
+        display:none !important;
+    }
+}
+
+/*=========================================================
+  Reduced Motion
+=========================================================*/
+
+@media (prefers-reduced-motion:reduce){
+
+    .mobile-toggle,
+    .mobile-toggle span,
+    .mobile-overlay,
+    .mobile-navigation{
+        transition:none;
+    }
+
+}

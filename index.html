@@ -81,6 +81,7 @@
          href="css/design-system.css">
       <link rel="stylesheet"
          href="css/style.css">
+      <link rel="stylesheet" href="css/navigation.css">
       <link rel="stylesheet"
          href="css/responsive.css">
       <link rel="stylesheet"
@@ -90,46 +91,136 @@
    </head>
    <body>
       <!-- =========================================================
-         HEADER
-         ========================================================== -->
-      <header id="header">
-         <div class="container">
-            <nav class="navbar">
-               <a class="logo"
-                  href="#home">
-               <img
-                  src="images/logo.svg"
-                  alt="Santulan Therapy Clinic"
-                  width="220"
-                  height="55">
-               </a>
-               <ul class="nav-links">
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#therapist">Therapist</a></li>
-                  <li><a href="#faq">FAQ</a></li>
-                  <li><a href="#contact">Contact</a></li>
-               </ul>
-               <div class="nav-buttons">
-                  <a
-                     class="btn btn-outline js-phone">
-                  Call Now
-                  </a>
-                  <a
-                     class="btn btn-primary js-whatsapp"
-                     target="_blank">
-                  Book Appointment
-                  </a>
-               </div>
-               <button
-                  id="mobileMenu"
-                  aria-label="Open Navigation">
-               ☰
-               </button>
+        HEADER
+        ========================================================= -->
+
+        <header id="header">
+
+            <div class="container">
+
+                <nav class="navbar">
+
+                    <!-- Logo -->
+
+                    <a
+                        href="#home"
+                        class="logo">
+
+                        <img
+                            src="images/logo.svg"
+                            alt="Santulan Therapy Clinic">
+
+                    </a>
+
+                    <!-- Desktop Navigation -->
+
+                    <ul class="nav-links">
+
+                        <li><a href="#home">Home</a></li>
+
+                        <li><a href="#about">About</a></li>
+
+                        <li><a href="#services">Services</a></li>
+
+                        <li><a href="#therapist">Therapist</a></li>
+
+                        <li><a href="#process">Process</a></li>
+
+                        <li><a href="#faq">FAQ</a></li>
+
+                        <li><a href="#contact">Contact</a></li>
+
+                    </ul>
+
+                    <!-- Desktop Buttons -->
+
+                    <div class="nav-buttons">
+
+                        <a
+                            class="btn btn-outline js-phone">
+
+                            Call Now
+
+                        </a>
+
+                        <a
+                            class="btn btn-primary js-whatsapp"
+                            target="_blank">
+
+                            Book Appointment
+
+                        </a>
+
+                    </div>
+
+                    <!-- Mobile Toggle -->
+
+                    <button
+                        id="mobileMenu"
+                        class="mobile-toggle"
+                        aria-label="Open navigation"
+                        aria-expanded="false"
+                        aria-controls="mobileNavigation">
+
+                        <span></span>
+
+                        <span></span>
+
+                        <span></span>
+
+                    </button>
+
+                </nav>
+
+            </div>
+
+        </header>
+
+        <!-- =========================================================
+        MOBILE MENU
+        ========================================================= -->
+
+        <div
+            id="mobileOverlay"
+            class="mobile-overlay">
+
+        </div>
+
+        <aside
+            id="mobileNavigation"
+            class="mobile-navigation">
+
+            <nav>
+
+                <a href="#home">Home</a>
+
+                <a href="#about">About</a>
+
+                <a href="#services">Services</a>
+
+                <a href="#therapist">Therapist</a>
+
+                <a href="#process">Process</a>
+
+                <a href="#faq">FAQ</a>
+
+                <a href="#contact">Contact</a>
+
+                <div class="mobile-actions">
+
+                    <a
+                        class="btn btn-primary js-whatsapp"
+                        target="_blank">
+
+                        Book Appointment
+
+                    </a>
+
+                </div>
+
             </nav>
-         </div>
-      </header>
+
+        </aside>
       <!-- =========================================================
          HERO
          ========================================================== -->
@@ -910,7 +1001,7 @@
             <div class="stats-grid">
                <div class="stat-card reveal">
                   <h2>
-                     50+
+                     100+
                   </h2>
                   <p>
                      Successful Sessions

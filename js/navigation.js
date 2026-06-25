@@ -91,6 +91,43 @@ function setupSmoothScrolling() {
 
             });
 
+            const mobileMenu =
+                document.getElementById("mobileNavigation");
+
+            const overlay =
+                document.getElementById("mobileOverlay");
+
+            const button =
+                document.getElementById("mobileMenu");
+
+            if (mobileMenu) {
+
+                mobileMenu.classList.remove("active");
+
+            }
+
+            if (overlay) {
+
+                overlay.classList.remove("active");
+
+            }
+
+            if (button) {
+
+                button.innerHTML = "☰";
+
+                button.setAttribute(
+
+                    "aria-expanded",
+
+                    "false"
+
+                );
+
+            }
+
+            document.body.style.overflow = "";
+
         });
 
     });
@@ -105,7 +142,7 @@ function setupActiveNavigation() {
 
     const sections = document.querySelectorAll("section[id]");
 
-    const navLinks = document.querySelectorAll(".nav-links a");
+    const navLinks = document.querySelectorAll(".nav-links a, .mobile-navigation a");
 
     if (!sections.length || !navLinks.length)
         return;
@@ -162,42 +199,137 @@ function setupActiveNavigation() {
   Mobile Menu
 =========================================================*/
 
+/*=========================================================
+  Mobile Navigation
+=========================================================*/
+
 function setupMobileMenu() {
 
     const button =
-
         document.getElementById("mobileMenu");
 
-    const nav =
+    const menu =
+        document.getElementById("mobileNavigation");
 
-        document.querySelector(".nav-links");
+    const overlay =
+        document.getElementById("mobileOverlay");
 
-    if (!button || !nav)
+    if (!button || !menu || !overlay)
         return;
 
-    button.addEventListener("click", () => {
+    const openMenu = () => {
 
-        nav.classList.toggle("mobile-open");
+        menu.classList.add("active");
 
-        button.classList.toggle("active");
+        overlay.classList.add("active");
+
+        document.body.style.overflow = "hidden";
+
+        button.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+        button.classList.add("active");
+
+    };
+
+    const closeMenu = () => {
+
+        menu.classList.remove("active");
+
+        overlay.classList.remove("active");
+
+        document.body.style.overflow = "";
+
+        button.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        button.classList.remove("active");
+
+    };
+
+    button.addEventListener(
+
+        "click",
+
+        () => {
+
+            if (menu.classList.contains("active")) {
+
+                closeMenu();
+
+            } else {
+
+                openMenu();
+
+            }
+
+        }
+
+    );
+
+    overlay.addEventListener(
+
+        "click",
+
+        closeMenu
+
+    );
+
+    menu.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener(
+
+            "click",
+
+            closeMenu
+
+        );
 
     });
 
-    const links =
+    document.addEventListener(
 
-        nav.querySelectorAll("a");
+        "keydown",
 
-    links.forEach(link => {
+        e => {
 
-        link.addEventListener("click", () => {
+            if (
 
-            nav.classList.remove("mobile-open");
+                e.key === "Escape"
 
-            button.classList.remove("active");
+            ) {
 
-        });
+                closeMenu();
 
-    });
+            }
+
+        }
+
+    );
+
+    window.addEventListener(
+
+        "resize",
+
+        () => {
+
+            if (
+
+                window.innerWidth > 992
+
+            ) {
+
+                closeMenu();
+
+            }
+
+        }
+
+    );
 
 }
 
@@ -205,24 +337,24 @@ function setupMobileMenu() {
   Close Mobile Menu
 =========================================================*/
 
-window.addEventListener("resize", () => {
+// window.addEventListener("resize", () => {
 
-    if (window.innerWidth > 992) {
+//     if (window.innerWidth > 992) {
 
-        const nav =
+//         const nav =
 
-            document.querySelector(".nav-links");
+//             document.querySelector(".nav-links");
 
-        const button =
+//         const button =
 
-            document.getElementById("mobileMenu");
+//             document.getElementById("mobileMenu");
 
-        if (nav)
-            nav.classList.remove("mobile-open");
+//         if (nav)
+//             nav.classList.remove("mobile-open");
 
-        if (button)
-            button.classList.remove("active");
+//         if (button)
+//             button.classList.remove("active");
 
-    }
+//     }
 
-});
+// });

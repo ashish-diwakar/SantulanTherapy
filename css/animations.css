@@ -1,54 +1,23 @@
 /*=========================================================
   Santulan Therapy Clinic
-  Animation Stylesheet
+  Animations
 =========================================================*/
 
-/*=========================================================
-  Global Transition
-=========================================================*/
-
-*{
-
-    transition:
-        color .25s ease,
-        background-color .25s ease,
-        border-color .25s ease,
-        transform .35s ease,
-        box-shadow .35s ease,
-        opacity .35s ease;
-
-}
-
-/*=========================================================
-  Buttons
-=========================================================*/
-
+/* Buttons */
 .btn{
-
     position:relative;
-
     overflow:hidden;
-
+    transition:transform .25s ease, box-shadow .3s ease;
 }
-
 .btn:hover{
-
     transform:translateY(-3px);
-
     box-shadow:var(--shadow-lg);
-
 }
-
 .btn:active{
-
     transform:translateY(0);
-
 }
 
-/*=========================================================
-  Card Hover
-=========================================================*/
-
+/* Cards */
 .card,
 .service-card,
 .feature-card,
@@ -56,11 +25,8 @@
 .testimonial-card,
 .stat-card,
 .highlight-card{
-
-    transition:all .35s ease;
-
+    transition:transform .35s ease, box-shadow .35s ease;
 }
-
 .card:hover,
 .service-card:hover,
 .feature-card:hover,
@@ -68,409 +34,123 @@
 .testimonial-card:hover,
 .stat-card:hover,
 .highlight-card:hover{
-
-    transform:translateY(-10px);
-
+    transform:translateY(-8px);
     box-shadow:var(--shadow-lg);
-
 }
 
-/*=========================================================
-  Navigation Hover
-=========================================================*/
-
-.nav-links a{
-
-    transition:.3s;
-
-}
-
-.nav-links a:hover{
-
-    color:var(--primary);
-
-}
-
-/*=========================================================
-  Logo
-=========================================================*/
-
+/* Logo */
 .logo img{
-
     transition:transform .4s ease;
-
 }
-
 .logo:hover img{
-
     transform:scale(1.05);
-
 }
 
-/*=========================================================
-  Hero Illustration
-=========================================================*/
-
+/* Floating Images */
 .hero-image img{
-
-    animation:floatImage 6s ease-in-out infinite;
-
-}
-
-/*=========================================================
-  Therapist Illustration
-=========================================================*/
-
-.therapist-illustration img{
-
     animation:floatImage 8s ease-in-out infinite;
-
+}
+.therapist-illustration img{
+    animation:floatImage 10s ease-in-out infinite;
 }
 
-/*=========================================================
-  Floating WhatsApp
-=========================================================*/
-
+/* WhatsApp */
 .floating-whatsapp{
-
-    animation:whatsappPulse 2.8s infinite;
-
+    animation:whatsappPulse 3.5s infinite;
 }
-
 .floating-whatsapp:hover{
-
-    transform:scale(1.12);
-
+    transform:scale(1.08);
 }
 
-/*=========================================================
-  Statistics Hover
-=========================================================*/
-
-.stat-card:hover h2{
-
-    color:var(--accent);
-
-}
-
-/*=========================================================
-  FAQ
-=========================================================*/
-
+/* FAQ */
 details{
-
-    transition:.3s;
-
+    transition:box-shadow .3s ease;
 }
-
 details[open]{
-
     box-shadow:var(--shadow-md);
-
 }
-
 summary{
-
-    transition:.3s;
-
+    transition:color .3s ease;
 }
-
 summary:hover{
-
     color:var(--primary);
-
 }
 
-/*=========================================================
-  Scroll Animation
-=========================================================*/
-
+/* Scroll Reveal */
 .reveal{
-
     opacity:0;
-
-    transform:translateY(60px);
-
-    transition:
-
-        opacity .8s ease,
-
-        transform .8s ease;
-
+    transform:translateY(40px);
+    transition:opacity .8s ease, transform .8s ease;
 }
-
 .reveal.active{
-
     opacity:1;
-
     transform:translateY(0);
-
 }
-
-/*=========================================================
-  Fade
-=========================================================*/
 
 .fade{
-
     opacity:0;
-
     transition:opacity .8s ease;
-
 }
-
-.fade.active{
-
-    opacity:1;
-
-}
-
-/*=========================================================
-  Scale
-=========================================================*/
+.fade.active{opacity:1;}
 
 .scale{
-
     opacity:0;
-
-    transform:scale(.9);
-
-    transition:
-
-        opacity .8s ease,
-
-        transform .8s ease;
-
+    transform:scale(.95);
+    transition:opacity .8s ease, transform .8s ease;
 }
-
 .scale.active{
-
     opacity:1;
-
     transform:scale(1);
-
 }
-
-/*=========================================================
-  Slide Left
-=========================================================*/
 
 .slide-left{
-
     opacity:0;
-
-    transform:translateX(-80px);
-
-    transition:.8s;
-
+    transform:translateX(-60px);
+    transition:opacity .8s ease, transform .8s ease;
 }
-
 .slide-left.active{
-
     opacity:1;
-
     transform:translateX(0);
-
 }
-
-/*=========================================================
-  Slide Right
-=========================================================*/
 
 .slide-right{
-
     opacity:0;
-
-    transform:translateX(80px);
-
-    transition:.8s;
-
+    transform:translateX(60px);
+    transition:opacity .8s ease, transform .8s ease;
 }
-
 .slide-right.active{
-
     opacity:1;
-
     transform:translateX(0);
-
 }
 
-/*=========================================================
-  Hero Background
-=========================================================*/
-
-.hero{
-
-    overflow:hidden;
-
-}
-
-.hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:420px;
-
-    height:420px;
-
-    border-radius:50%;
-
-    background:rgba(46,94,78,.05);
-
-    top:-120px;
-
-    right:-120px;
-
-    animation:rotateBlob 20s linear infinite;
-
-}
-
-.hero::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:300px;
-
-    height:300px;
-
-    border-radius:50%;
-
-    background:rgba(200,162,90,.08);
-
-    bottom:-100px;
-
-    left:-100px;
-
-    animation:rotateBlobReverse 18s linear infinite;
-
-}
-
-/*=========================================================
-  Keyframes
-=========================================================*/
-
+/* Keyframes */
 @keyframes floatImage{
-
-    0%{
-
-        transform:translateY(0);
-
-    }
-
-    50%{
-
-        transform:translateY(-18px);
-
-    }
-
-    100%{
-
-        transform:translateY(0);
-
-    }
-
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-16px);}
+    100%{transform:translateY(0);}
 }
 
 @keyframes whatsappPulse{
-
-    0%{
-
-        box-shadow:0 0 0 0 rgba(37,211,102,.4);
-
-    }
-
-    70%{
-
-        box-shadow:0 0 0 18px rgba(37,211,102,0);
-
-    }
-
-    100%{
-
-        box-shadow:0 0 0 0 rgba(37,211,102,0);
-
-    }
-
+    0%{box-shadow:0 0 0 0 rgba(37,211,102,.4);}
+    70%{box-shadow:0 0 0 18px rgba(37,211,102,0);}
+    100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
 }
 
 @keyframes rotateBlob{
-
-    from{
-
-        transform:rotate(0deg);
-
-    }
-
-    to{
-
-        transform:rotate(360deg);
-
-    }
-
+    from{transform:rotate(0);}
+    to{transform:rotate(360deg);}
 }
 
 @keyframes rotateBlobReverse{
-
-    from{
-
-        transform:rotate(360deg);
-
-    }
-
-    to{
-
-        transform:rotate(0deg);
-
-    }
-
+    from{transform:rotate(360deg);}
+    to{transform:rotate(0);}
 }
 
-/*=========================================================
-  Disable Animation
-=========================================================*/
-
+/* Reduced Motion */
 @media (prefers-reduced-motion:reduce){
-
-    *{
-
+    *,*::before,*::after{
         animation:none !important;
-
         transition:none !important;
-
         scroll-behavior:auto !important;
-
     }
-
-}
-
-/*=========================================================
-Animation Delay Support
-=========================================================*/
-
-.service-card,
-.feature-card,
-.process-card,
-.testimonial-card,
-.stat-card{
-
-    opacity:0;
-
-    transform:translateY(40px);
-
-}
-
-.service-card.active,
-.feature-card.active,
-.process-card.active,
-.testimonial-card.active,
-.stat-card.active{
-
-    opacity:1;
-
-    transform:translateY(0);
-
 }
