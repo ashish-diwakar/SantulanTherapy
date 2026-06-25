@@ -47,7 +47,7 @@ const CONFIG = {
 
     location: {
 
-        address1: "146 A, DDA Flats",
+        address1: "146 A, Gate No. 6, DDA Flats",
 
         address2: "Satyam Enclave",
 
@@ -62,10 +62,10 @@ const CONFIG = {
         longitude: "77.3048308",
 
         mapEmbed:
-            "https://www.google.com/maps?q=28.6674552,77.3048308&z=17&output=embed",
+            "https://www.google.com/maps?q=28.666917,77.305306&z=17&output=embed",
 
         mapLink:
-            "https://www.google.com/maps/place/Accurate+Dewatering+Systems/@28.6674552,77.3048308,17z"
+            "https://www.google.com/maps?q=28.666917,77.305306"
 
     },
 

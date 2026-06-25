@@ -601,6 +601,84 @@ Contact
 
 }
 
+.contact-list{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:35px 0;
+
+}
+
+.contact-list li{
+
+    display:flex;
+
+    gap:16px;
+
+    align-items:flex-start;
+
+    margin-bottom:28px;
+
+}
+
+.contact-list img{
+
+    flex-shrink:0;
+
+    margin-top:4px;
+
+}
+
+.contact-list address{
+
+    font-style:normal;
+
+    line-height:1.8;
+
+}
+
+.contact-intro{
+
+    margin:25px 0 35px;
+
+    line-height:1.9;
+
+}
+
+.clinic-hours{
+
+    margin:35px 0;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    background:#F8FBF9;
+
+}
+
+.contact-actions{
+
+    display:flex;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+
+}
+
+.map-actions{
+
+    text-align:center;
+
+    margin-top:20px;
+
+}
+
 /*=========================================================
 Footer
 =========================================================*/

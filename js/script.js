@@ -53,6 +53,9 @@ const App = {
         this.currentYear =
             document.querySelectorAll(".js-current-year");
 
+        this.mapLinks =
+            document.querySelectorAll(".js-map-link");
+
     },
 
     /*=====================================================
@@ -70,6 +73,8 @@ const App = {
         this.bindAddress();
 
         this.bindMap();
+
+        this.bindMapLink();
 
     },
 
@@ -144,6 +149,19 @@ const App = {
 
             frame.src =
                 CONFIG.location.mapEmbed;
+
+        });
+
+    },
+
+    /*=====================================================
+      Google Map Link
+    =====================================================*/
+    bindMapLink() {
+
+        this.mapLinks.forEach(link => {
+
+            link.href = CONFIG.location.mapLink;
 
         });
 
