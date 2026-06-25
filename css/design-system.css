@@ -1,0 +1,507 @@
+/*=========================================================
+  Santulan Therapy Clinic
+  Design System
+  Version : 1.0
+=========================================================*/
+
+/*=========================================================
+  Google Fonts
+=========================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*=========================================================
+  CSS Reset
+=========================================================*/
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+    scroll-padding-top:90px;
+
+}
+
+body{
+
+    margin:0;
+    padding:0;
+
+}
+
+/*=========================================================
+  Root Variables
+=========================================================*/
+
+:root{
+
+    /*==============================
+        Brand Colors
+    ==============================*/
+
+    --primary:#2E5E4E;
+    --primary-dark:#23473B;
+    --primary-light:#E8F3EE;
+
+    --accent:#C8A25A;
+    --accent-dark:#A8833F;
+    --accent-light:#EAD9B2;
+
+    --white:#FFFFFF;
+
+    --background:#F8FBF9;
+
+    --surface:#FFFFFF;
+
+    --heading:#1F2E27;
+
+    --text:#5B6761;
+
+    --text-light:#7D8B84;
+
+    --border:#E6ECE8;
+
+    --success:#3C9B63;
+
+    --danger:#D9534F;
+
+    /*==============================
+        Shadows
+    ==============================*/
+
+    --shadow-xs:0 2px 5px rgba(0,0,0,.04);
+
+    --shadow-sm:0 8px 20px rgba(0,0,0,.06);
+
+    --shadow-md:0 18px 40px rgba(0,0,0,.08);
+
+    --shadow-lg:0 30px 60px rgba(0,0,0,.12);
+
+    /*==============================
+        Border Radius
+    ==============================*/
+
+    --radius-xs:6px;
+
+    --radius-sm:10px;
+
+    --radius-md:18px;
+
+    --radius-lg:28px;
+
+    --radius-xl:40px;
+
+    --radius-round:999px;
+
+    /*==============================
+        Typography
+    ==============================*/
+
+    --heading-font:"Cormorant Garamond",serif;
+
+    --body-font:"Poppins",sans-serif;
+
+    /*==============================
+        Font Sizes
+    ==============================*/
+
+    --fs-12:.75rem;
+
+    --fs-14:.875rem;
+
+    --fs-16:1rem;
+
+    --fs-18:1.125rem;
+
+    --fs-20:1.25rem;
+
+    --fs-24:1.5rem;
+
+    --fs-30:1.875rem;
+
+    --fs-36:2.25rem;
+
+    --fs-42:2.625rem;
+
+    --fs-48:3rem;
+
+    --fs-56:3.5rem;
+
+    --fs-64:4rem;
+
+    /*==============================
+        Font Weights
+    ==============================*/
+
+    --fw-light:300;
+
+    --fw-normal:400;
+
+    --fw-medium:500;
+
+    --fw-semibold:600;
+
+    --fw-bold:700;
+
+    /*==============================
+        Section Spacing
+    ==============================*/
+
+    --section-padding:120px;
+
+    --section-gap:70px;
+
+    --content-gap:30px;
+
+    /*==============================
+        Container
+    ==============================*/
+
+    --container-width:1280px;
+
+    --container-padding:20px;
+
+    /*==============================
+        Animation
+    ==============================*/
+
+    --transition-fast:.2s ease;
+
+    --transition:.35s ease;
+
+    --transition-slow:.6s ease;
+
+}
+
+/*=========================================================
+  Base
+=========================================================*/
+
+body{
+
+    font-family:var(--body-font);
+
+    font-size:var(--fs-16);
+
+    color:var(--text);
+
+    background:var(--background);
+
+    line-height:1.8;
+
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
+
+}
+
+/*=========================================================
+  Images
+=========================================================*/
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/*=========================================================
+  Links
+=========================================================*/
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+/*=========================================================
+  Lists
+=========================================================*/
+
+ul{
+
+    list-style:none;
+
+}
+
+/*=========================================================
+  Buttons
+=========================================================*/
+
+button{
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+    border:none;
+
+    background:none;
+
+}
+
+/*=========================================================
+  Typography
+=========================================================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-family:var(--heading-font);
+
+    color:var(--heading);
+
+    line-height:1.2;
+
+    font-weight:600;
+
+}
+
+h1{
+
+    font-size:var(--fs-64);
+
+}
+
+h2{
+
+    font-size:var(--fs-48);
+
+}
+
+h3{
+
+    font-size:var(--fs-30);
+
+}
+
+h4{
+
+    font-size:var(--fs-24);
+
+}
+
+p{
+
+    margin-bottom:20px;
+
+}
+
+/*=========================================================
+  Section
+=========================================================*/
+
+.section{
+
+    padding:var(--section-padding) 0;
+
+}
+
+.container{
+
+    width:min(
+        100% - 40px,
+        var(--container-width)
+    );
+
+    margin-inline:auto;
+
+}
+
+/*=========================================================
+  Grid Helpers
+=========================================================*/
+
+.grid{
+
+    display:grid;
+
+}
+
+.flex{
+
+    display:flex;
+
+}
+
+.align-center{
+
+    align-items:center;
+
+}
+
+.justify-between{
+
+    justify-content:space-between;
+
+}
+
+.justify-center{
+
+    justify-content:center;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+/*=========================================================
+  Cards
+=========================================================*/
+
+.card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-md);
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/*=========================================================
+  Buttons
+=========================================================*/
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:15px 30px;
+
+    border-radius:var(--radius-round);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:var(--white);
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+}
+
+.btn-outline{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:var(--white);
+
+}
+
+/*=========================================================
+  Badge
+=========================================================*/
+
+.section-tag{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:var(--primary-light);
+
+    color:var(--primary);
+
+    border-radius:999px;
+
+    font-size:var(--fs-14);
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+/*=========================================================
+  Selection
+=========================================================*/
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/*=========================================================
+  Scrollbar
+=========================================================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:999px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#eef4f0;
+
+}

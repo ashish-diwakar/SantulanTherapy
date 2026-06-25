@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1600 900"
+    preserveAspectRatio="xMidYMid slice">
+
+    <defs>
+
+        <linearGradient
+            id="bg"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="100%">
+
+            <stop
+                offset="0%"
+                stop-color="#F8FBF9"/>
+
+            <stop
+                offset="100%"
+                stop-color="#EDF6F1"/>
+
+        </linearGradient>
+
+        <radialGradient
+            id="circle1">
+
+            <stop
+                offset="0%"
+                stop-color="#2E5E4E"
+                stop-opacity=".08"/>
+
+            <stop
+                offset="100%"
+                stop-color="#2E5E4E"
+                stop-opacity="0"/>
+
+        </radialGradient>
+
+        <radialGradient
+            id="circle2">
+
+            <stop
+                offset="0%"
+                stop-color="#C8A25A"
+                stop-opacity=".10"/>
+
+            <stop
+                offset="100%"
+                stop-color="#C8A25A"
+                stop-opacity="0"/>
+
+        </radialGradient>
+
+    </defs>
+
+    <rect
+        width="1600"
+        height="900"
+        fill="url(#bg)"/>
+
+    <circle
+        cx="1320"
+        cy="180"
+        r="260"
+        fill="url(#circle1)"/>
+
+    <circle
+        cx="280"
+        cy="720"
+        r="320"
+        fill="url(#circle2)"/>
+
+    <circle
+        cx="850"
+        cy="240"
+        r="120"
+        fill="#2E5E4E"
+        opacity=".03"/>
+
+    <circle
+        cx="1180"
+        cy="640"
+        r="90"
+        fill="#C8A25A"
+        opacity=".05"/>
+
+</svg>

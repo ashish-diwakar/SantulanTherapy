@@ -1,0 +1,22 @@
+# =========================================================
+# Santulan Therapy Clinic
+# robots.txt
+# =========================================================
+
+User-agent: *
+
+# Allow crawling of all public pages
+Allow: /
+
+# Disallow internal/private folders (future use)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+Disallow: /temp/
+Disallow: /.git/
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://www.santulantherapy.com/sitemap.xml

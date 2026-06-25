@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 180"
+    preserveAspectRatio="none">
+
+    <path
+        fill="#F8FBF9"
+        d="
+        M0,64
+
+        C160,0
+        340,160
+        540,110
+
+        C720,60
+        920,0
+        1110,70
+
+        C1270,125
+        1360,160
+        1440,110
+
+        L1440,0
+        L0,0
+        Z"/>
+
+</svg>

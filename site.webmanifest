@@ -1,0 +1,21 @@
+{
+    "name": "Santulan Therapy Clinic",
+    "short_name": "Santulan",
+    "description": "Professional Counseling & Psychological Therapy by Rashi Tangri.",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#F8FBF9",
+    "theme_color": "#2E5E4E",
+    "lang": "en-IN",
+
+    "icons": [
+        {
+            "src": "images/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ]
+}
