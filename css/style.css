@@ -1390,3 +1390,24 @@ Interactive Cards
 
 }
 
+/*=========================================================
+  Service List
+=========================================================*/
+
+.service-list{
+
+    margin-top:30px;
+
+    padding-left:20px;
+
+}
+
+.service-list li{
+
+    margin-bottom:14px;
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
