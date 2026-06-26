@@ -47,7 +47,7 @@ const CONFIG = {
 
     location: {
 
-        address1: "146 A, Gate No. 6, DDA Flats",
+        address1: "Santulan Therapy Clinic, 146 A, Gate No. 6, DDA Flats",
 
         address2: "Satyam Enclave",
 
@@ -57,15 +57,15 @@ const CONFIG = {
 
         pincode: "110095",
 
-        latitude: "28.6674552",
+        latitude: "28.6668803",
 
-        longitude: "77.3048308",
+        longitude: "77.3049599",
 
         mapEmbed:
-            "https://www.google.com/maps?q=28.666917,77.305306&z=17&output=embed",
+            "https://www.google.com/maps?q=28.6668803,77.3049599&z=16&output=embed",
 
         mapLink:
-            "https://www.google.com/maps?q=28.666917,77.305306"
+            "https://maps.app.goo.gl/yPGmuqyD6fb2gYa8A?g_st=iw"
 
     },
 
