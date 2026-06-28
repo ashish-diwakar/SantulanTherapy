@@ -1607,53 +1607,12 @@ Bottom Footer
 
 }
 
-/*==========================================
-Responsive
-==========================================*/
-
-@media (max-width:992px) {
-
-	.footer-grid {
-
-		grid-template-columns: 1fr 1fr;
-
-		gap: 45px;
-
-	}
-
+.footer-about a img.footer-logo {
+    class="footer-logo"
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@media (max-width:640px) {
-
-	.footer-grid {
-
-		grid-template-columns: 1fr;
-
-		gap: 40px;
-
-	}
-
-	.site-footer h4 {
-
-		font-size: 1.5rem;
-
-	}
-
-	.footer-bottom-links {
-
-		flex-direction: column;
-
-		gap: 8px;
-
-	}
-
-	.footer-bottom-links span {
-
-		display: none;
-
-	}
-
-}
 
 /*=========================================================
 Accessibility
@@ -1739,6 +1698,12 @@ Interactive Cards
 .contact-list li:hover {
 
 	transform: translateX(5px);
+
+}
+
+.contact-list li div {
+
+	width: 90%;
 
 }
 
