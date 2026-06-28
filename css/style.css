@@ -1607,8 +1607,8 @@ Bottom Footer
 
 }
 
-.footer-about a img.footer-logo {
-    class="footer-logo"
+.footer-about a img.footer-logo-image {
+    background-color: aliceblue;
     margin-left: auto;
     margin-right: auto;
 }
